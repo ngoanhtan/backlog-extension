@@ -113,7 +113,7 @@ function getIssueData(issueType, ticketId, subjectRaw) {
     const gitBranch = `${issueType}/${ticketId}-${subjectLowcase}`;
     const gitCommitMsg = `[${ticketId}]: ${subject}`;
     const gitCheckoutCmd = `git checkout -b ${issueType}/${ticketId}-${subjectLowcase}`;
-    const gitCommitCmd = `git add . && git commit -m "[${ticketId}] ${subject}"`;
+    const gitCommitCmd = `git add . && git commit -m "[${ticketId}]: ${subject}"`;
 
     return {
         gitBranch,
